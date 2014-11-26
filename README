@@ -18,4 +18,6 @@ Joao Manoel <joaomanoel7@gmail.com>
 A licensa eh segundo a GPL3: http://www.gnu.org/licenses/gpl-3.0.txt
 Uma copia da GPL 3 se encontra em "LICENSE"
 
-Os scripts estao no diretório "bin"
+Os scripts estão no diretório "bin"
+Exemplos de uso de shell scripts com dialog estão no diretório "dialog"
+Exemplos de uso do sed emulando comandos de shell scripts estão no diretório "sed"
