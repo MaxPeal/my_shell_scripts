@@ -1,0 +1,3 @@
+#!/bin/sh
+export PYTHONPATH="/home/joaomanoel/.local/share/gedit/plugins/pyprofiler:/home/joaomanoel/.local/share/gedit/plugins/pylint-2:/home/joaomanoel/.local/share/gedit/plugins/send_tracebacks"
+exec  /usr/bin/gedit "$@"

@@ -1,0 +1,2 @@
+# retorna o numero da linha da 10a. ocorrencia de '[submenu]' no arquivo 'menu'
+nl menu | grep "\[submenu\]" | sed -n -e "10 P" | cut -f1

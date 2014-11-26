@@ -1,0 +1,431 @@
+mkdir maverick
+cd maverick
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick/Contents-i386.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick/Release
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick/Release.gpg
+
+mkdir main
+cd main
+
+mkdir binary-i386
+cd binary-i386
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick/main/binary-i386/Packages.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick/main/binary-i386/Release
+cd ..
+
+mkdir source
+cd source
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick/main/source/Sources.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick/main/source/Release
+cd ..
+
+mkdir i18n
+cd i18n
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick/main/i18n/Translation-pt_BR.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick/main/i18n/Translation-pt.gz
+cd..
+
+cd ..
+
+mkdir multiverse
+cd multiverse
+
+mkdir binary-i386
+cd binary-i386
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick/multiverse/binary-i386/Packages.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick/multiverse/binary-i386/Release
+cd ..
+
+mkdir source
+cd source
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick/multiverse/source/Sources.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick/multiverse/source/Release
+cd ..
+
+mkdir i18n
+cd i18n
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick/multiverse/i18n/Translation-pt_BR.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick/multiverse/i18n/Translation-pt.gz
+cd..
+
+cd ..
+
+mkdir restricted
+cd restricted
+
+mkdir binary-i386
+cd binary-i386
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick/restricted/binary-i386/Packages.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick/restricted/binary-i386/Release
+cd ..
+
+mkdir source
+cd source
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick/restricted/source/Sources.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick/restricted/source/Release
+cd ..
+
+mkdir i18n
+cd i18n
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick/restricted/i18n/Translation-pt_BR.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick/restricted/i18n/Translation-pt.gz
+cd..
+
+cd ..
+
+mkdir universe
+cd universe
+
+mkdir binary-i386
+cd binary-i386
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick/universe/binary-i386/Packages.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick/universe/binary-i386/Release
+cd ..
+
+mkdir source
+cd source
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick/universe/source/Sources.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick/universe/source/Release
+cd ..
+
+mkdir i18n
+cd i18n
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick/universe/i18n/Translation-pt_BR.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick/universe/i18n/Translation-pt.gz
+cd..
+
+cd ..
+
+cd ..
+
+mkdir maverick-proposed
+cd maverick-proposed
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-proposed/Contents-i386.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-proposed/Release
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-proposed/Release.gpg
+
+mkdir main
+cd main
+
+mkdir binary-i386
+cd binary-i386
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-proposed/main/binary-i386/Packages.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-proposed/main/binary-i386/Release
+cd ..
+
+mkdir source
+cd source
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-proposed/main/source/Sources.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-proposed/main/source/Release
+cd ..
+
+mkdir i18n
+cd i18n
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-proposed/main/i18n/Translation-pt_BR.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-proposed/main/i18n/Translation-pt.gz
+cd..
+
+cd ..
+
+
+mkdir multiverse
+cd multiverse
+
+mkdir binary-i386
+cd binary-i386
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-proposed/multiverse/binary-i386/Packages.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-proposed/multiverse/binary-i386/Release
+cd ..
+
+mkdir source
+cd source
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-proposed/multiverse/source/Sources.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-proposed/multiverse/source/Release
+cd ..
+
+mkdir i18n
+cd i18n
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-proposed/multiverse/i18n/Translation-pt_BR.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-proposed/multiverse/i18n/Translation-pt.gz
+cd..
+
+cd ..
+
+mkdir restricted
+cd restricted
+
+mkdir binary-i386
+cd binary-i386
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-proposed/restricted/binary-i386/Packages.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-proposed/restricted/binary-i386/Release
+cd ..
+
+mkdir source
+cd source
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-proposed/restricted/source/Sources.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-proposed/restricted/source/Release
+cd ..
+
+mkdir i18n
+cd i18n
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-proposed/restricted/i18n/Translation-pt_BR.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-proposed/restricted/i18n/Translation-pt.gz
+cd..
+
+cd ..
+
+mkdir universe
+cd universe
+
+mkdir binary-i386
+cd binary-i386
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-proposed/universe/binary-i386/Packages.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-proposed/universe/binary-i386/Release
+cd ..
+
+mkdir source
+cd source
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-proposed/universe/source/Sources.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-proposed/universe/source/Release
+cd ..
+
+mkdir i18n
+cd i18n
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-proposed/universe/i18n/Translation-pt_BR.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-proposed/universe/i18n/Translation-pt.gz
+cd..
+
+cd ..
+
+cd ..
+
+mkdir maverick-backports
+cd maverick-backports
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-backports/Contents-i386.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-backports/Release
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-backports/Release.gpg
+
+mkdir main
+cd main
+
+mkdir binary-i386
+cd binary-i386
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-backports/main/binary-i386/Packages.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-backports/main/binary-i386/Release
+cd ..
+
+mkdir source
+cd source
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-backports/main/source/Sources.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-backports/main/source/Release
+cd ..
+
+cd ..
+
+
+mkdir multiverse
+cd multiverse
+
+mkdir binary-i386
+cd binary-i386
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-backports/multiverse/binary-i386/Packages.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-backports/multiverse/binary-i386/Release
+cd ..
+
+mkdir source
+cd source
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-backports/multiverse/source/Sources.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-backports/multiverse/source/Release
+cd ..
+
+cd ..
+
+mkdir restricted
+cd restricted
+
+mkdir binary-i386
+cd binary-i386
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-backports/restricted/binary-i386/Packages.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-backports/restricted/binary-i386/Release
+cd ..
+
+mkdir source
+cd source
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-backports/restricted/source/Sources.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-backports/restricted/source/Release
+cd ..
+
+cd ..
+
+mkdir universe
+cd universe
+
+mkdir binary-i386
+cd binary-i386
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-backports/universe/binary-i386/Packages.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-backports/universe/binary-i386/Release
+cd ..
+
+mkdir source
+cd source
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-backports/universe/source/Sources.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-backports/universe/source/Release
+cd ..
+
+cd ..
+
+cd ..
+
+mkdir maverick-security
+cd maverick-security
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-security/Contents-i386.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-security/Release
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-security/Release.gpg
+
+mkdir main
+cd main
+
+mkdir binary-i386
+cd binary-i386
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-security/main/binary-i386/Packages.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-security/main/binary-i386/Release
+cd ..
+
+mkdir source
+cd source
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-security/main/source/Sources.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-security/main/source/Release
+cd ..
+
+cd ..
+
+
+mkdir multiverse
+cd multiverse
+
+mkdir binary-i386
+cd binary-i386
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-security/multiverse/binary-i386/Packages.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-security/multiverse/binary-i386/Release
+cd ..
+
+mkdir source
+cd source
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-security/multiverse/source/Sources.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-security/multiverse/source/Release
+cd ..
+
+cd ..
+
+mkdir restricted
+cd restricted
+
+mkdir binary-i386
+cd binary-i386
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-security/restricted/binary-i386/Packages.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-security/restricted/binary-i386/Release
+cd ..
+
+mkdir source
+cd source
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-security/restricted/source/Sources.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-security/restricted/source/Release
+cd ..
+
+cd ..
+
+mkdir universe
+cd universe
+
+mkdir binary-i386
+cd binary-i386
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-security/universe/binary-i386/Packages.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-security/universe/binary-i386/Release
+cd ..
+
+mkdir source
+cd source
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-security/universe/source/Sources.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-security/universe/source/Release
+cd ..
+
+cd ..
+
+cd ..
+
+mkdir maverick-updates
+cd maverick-updates
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-updates/Contents-i386.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-updates/Release
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-updates/Release.gpg
+
+mkdir main
+cd main
+
+mkdir binary-i386
+cd binary-i386
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-updates/main/binary-i386/Packages.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-updates/main/binary-i386/Release
+cd ..
+
+mkdir source
+cd source
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-updates/main/source/Sources.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-updates/main/source/Release
+cd ..
+
+cd ..
+
+
+mkdir multiverse
+cd multiverse
+
+mkdir binary-i386
+cd binary-i386
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-updates/multiverse/binary-i386/Packages.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-updates/multiverse/binary-i386/Release
+cd ..
+
+mkdir source
+cd source
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-updates/multiverse/source/Sources.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-updates/multiverse/source/Release
+cd ..
+
+cd ..
+
+mkdir restricted
+cd restricted
+
+mkdir binary-i386
+cd binary-i386
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-updates/restricted/binary-i386/Packages.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-updates/restricted/binary-i386/Release
+cd ..
+
+mkdir source
+cd source
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-updates/restricted/source/Sources.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-updates/restricted/source/Release
+cd ..
+
+cd ..
+
+mkdir universe
+cd universe
+
+mkdir binary-i386
+cd binary-i386
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-updates/universe/binary-i386/Packages.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-updates/universe/binary-i386/Release
+cd ..
+
+mkdir source
+cd source
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-updates/universe/source/Sources.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/maverick-updates/universe/source/Release
+cd ..
+
+cd ..
+
+cd ..

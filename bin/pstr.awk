@@ -1,0 +1,27 @@
+function pstr(data)
+{
+	ret=""
+	for (i=1; i<=length(data); i++) {
+		byte=substr(data,i,1)
+		if (byte == "$" || byte == "/" || byte == "\\")
+			ret = ret "\\" byte
+		else
+			ret = ret byte
+	}
+	return ret
+}
+
+BEGIN {
+	#if ( ARGV[1] == "" || system("test -f " ARGV[1] " -a -r " ARGV[1]) )
+	#	file="/dev/stdin"
+	#else
+	#	file=ARGV[1]
+	#cmd = getline line <file
+	#while ( cmd != 0 && cmd != -1 ) {
+	#	printf("%s\n", inverte(line));
+	#	cmd = getline line <file
+	#}
+	printf( "%s\n", pstr( ARGV[1] ) )
+	#if ( ARGV[2] == "-n" )
+	#	printf("\n")
+}

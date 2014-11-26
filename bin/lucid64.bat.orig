@@ -1,0 +1,431 @@
+mkdir lucid
+cd lucid
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid/Contents-amd64.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid/Release
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid/Release.gpg
+
+mkdir main
+cd main
+
+mkdir binary-amd64
+cd binary-amd64
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid/main/binary-amd64/Packages.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid/main/binary-amd64/Release
+cd ..
+
+mkdir source
+cd source
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid/main/source/Sources.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid/main/source/Release
+cd ..
+
+mkdir i18n
+cd i18n
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid/main/i18n/Translation-pt_BR.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid/main/i18n/Translation-pt.gz
+cd..
+
+cd ..
+
+mkdir multiverse
+cd multiverse
+
+mkdir binary-amd64
+cd binary-amd64
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid/multiverse/binary-amd64/Packages.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid/multiverse/binary-amd64/Release
+cd ..
+
+mkdir source
+cd source
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid/multiverse/source/Sources.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid/multiverse/source/Release
+cd ..
+
+mkdir i18n
+cd i18n
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid/multiverse/i18n/Translation-pt_BR.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid/multiverse/i18n/Translation-pt.gz
+cd..
+
+cd ..
+
+mkdir restricted
+cd restricted
+
+mkdir binary-amd64
+cd binary-amd64
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid/restricted/binary-amd64/Packages.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid/restricted/binary-amd64/Release
+cd ..
+
+mkdir source
+cd source
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid/restricted/source/Sources.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid/restricted/source/Release
+cd ..
+
+mkdir i18n
+cd i18n
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid/restricted/i18n/Translation-pt_BR.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid/restricted/i18n/Translation-pt.gz
+cd..
+
+cd ..
+
+mkdir universe
+cd universe
+
+mkdir binary-amd64
+cd binary-amd64
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid/universe/binary-amd64/Packages.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid/universe/binary-amd64/Release
+cd ..
+
+mkdir source
+cd source
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid/universe/source/Sources.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid/universe/source/Release
+cd ..
+
+mkdir i18n
+cd i18n
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid/universe/i18n/Translation-pt_BR.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid/universe/i18n/Translation-pt.gz
+cd..
+
+cd ..
+
+cd ..
+
+mkdir lucid-proposed
+cd lucid-proposed
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-proposed/Contents-amd64.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-proposed/Release
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-proposed/Release.gpg
+
+mkdir main
+cd main
+
+mkdir binary-amd64
+cd binary-amd64
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-proposed/main/binary-amd64/Packages.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-proposed/main/binary-amd64/Release
+cd ..
+
+mkdir source
+cd source
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-proposed/main/source/Sources.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-proposed/main/source/Release
+cd ..
+
+mkdir i18n
+cd i18n
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-proposed/main/i18n/Translation-pt_BR.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-proposed/main/i18n/Translation-pt.gz
+cd..
+
+cd ..
+
+
+mkdir multiverse
+cd multiverse
+
+mkdir binary-amd64
+cd binary-amd64
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-proposed/multiverse/binary-amd64/Packages.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-proposed/multiverse/binary-amd64/Release
+cd ..
+
+mkdir source
+cd source
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-proposed/multiverse/source/Sources.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-proposed/multiverse/source/Release
+cd ..
+
+mkdir i18n
+cd i18n
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-proposed/multiverse/i18n/Translation-pt_BR.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-proposed/multiverse/i18n/Translation-pt.gz
+cd..
+
+cd ..
+
+mkdir restricted
+cd restricted
+
+mkdir binary-amd64
+cd binary-amd64
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-proposed/restricted/binary-amd64/Packages.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-proposed/restricted/binary-amd64/Release
+cd ..
+
+mkdir source
+cd source
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-proposed/restricted/source/Sources.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-proposed/restricted/source/Release
+cd ..
+
+mkdir i18n
+cd i18n
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-proposed/restricted/i18n/Translation-pt_BR.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-proposed/restricted/i18n/Translation-pt.gz
+cd..
+
+cd ..
+
+mkdir universe
+cd universe
+
+mkdir binary-amd64
+cd binary-amd64
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-proposed/universe/binary-amd64/Packages.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-proposed/universe/binary-amd64/Release
+cd ..
+
+mkdir source
+cd source
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-proposed/universe/source/Sources.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-proposed/universe/source/Release
+cd ..
+
+mkdir i18n
+cd i18n
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-proposed/universe/i18n/Translation-pt_BR.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-proposed/universe/i18n/Translation-pt.gz
+cd..
+
+cd ..
+
+cd ..
+
+mkdir lucid-backports
+cd lucid-backports
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-backports/Contents-amd64.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-backports/Release
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-backports/Release.gpg
+
+mkdir main
+cd main
+
+mkdir binary-amd64
+cd binary-amd64
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-backports/main/binary-amd64/Packages.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-backports/main/binary-amd64/Release
+cd ..
+
+mkdir source
+cd source
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-backports/main/source/Sources.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-backports/main/source/Release
+cd ..
+
+cd ..
+
+
+mkdir multiverse
+cd multiverse
+
+mkdir binary-amd64
+cd binary-amd64
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-backports/multiverse/binary-amd64/Packages.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-backports/multiverse/binary-amd64/Release
+cd ..
+
+mkdir source
+cd source
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-backports/multiverse/source/Sources.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-backports/multiverse/source/Release
+cd ..
+
+cd ..
+
+mkdir restricted
+cd restricted
+
+mkdir binary-amd64
+cd binary-amd64
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-backports/restricted/binary-amd64/Packages.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-backports/restricted/binary-amd64/Release
+cd ..
+
+mkdir source
+cd source
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-backports/restricted/source/Sources.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-backports/restricted/source/Release
+cd ..
+
+cd ..
+
+mkdir universe
+cd universe
+
+mkdir binary-amd64
+cd binary-amd64
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-backports/universe/binary-amd64/Packages.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-backports/universe/binary-amd64/Release
+cd ..
+
+mkdir source
+cd source
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-backports/universe/source/Sources.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-backports/universe/source/Release
+cd ..
+
+cd ..
+
+cd ..
+
+mkdir lucid-security
+cd lucid-security
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-security/Contents-amd64.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-security/Release
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-security/Release.gpg
+
+mkdir main
+cd main
+
+mkdir binary-amd64
+cd binary-amd64
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-security/main/binary-amd64/Packages.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-security/main/binary-amd64/Release
+cd ..
+
+mkdir source
+cd source
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-security/main/source/Sources.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-security/main/source/Release
+cd ..
+
+cd ..
+
+
+mkdir multiverse
+cd multiverse
+
+mkdir binary-amd64
+cd binary-amd64
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-security/multiverse/binary-amd64/Packages.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-security/multiverse/binary-amd64/Release
+cd ..
+
+mkdir source
+cd source
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-security/multiverse/source/Sources.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-security/multiverse/source/Release
+cd ..
+
+cd ..
+
+mkdir restricted
+cd restricted
+
+mkdir binary-amd64
+cd binary-amd64
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-security/restricted/binary-amd64/Packages.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-security/restricted/binary-amd64/Release
+cd ..
+
+mkdir source
+cd source
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-security/restricted/source/Sources.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-security/restricted/source/Release
+cd ..
+
+cd ..
+
+mkdir universe
+cd universe
+
+mkdir binary-amd64
+cd binary-amd64
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-security/universe/binary-amd64/Packages.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-security/universe/binary-amd64/Release
+cd ..
+
+mkdir source
+cd source
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-security/universe/source/Sources.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-security/universe/source/Release
+cd ..
+
+cd ..
+
+cd ..
+
+mkdir lucid-updates
+cd lucid-updates
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-updates/Contents-amd64.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-updates/Release
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-updates/Release.gpg
+
+mkdir main
+cd main
+
+mkdir binary-amd64
+cd binary-amd64
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-updates/main/binary-amd64/Packages.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-updates/main/binary-amd64/Release
+cd ..
+
+mkdir source
+cd source
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-updates/main/source/Sources.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-updates/main/source/Release
+cd ..
+
+cd ..
+
+
+mkdir multiverse
+cd multiverse
+
+mkdir binary-amd64
+cd binary-amd64
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-updates/multiverse/binary-amd64/Packages.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-updates/multiverse/binary-amd64/Release
+cd ..
+
+mkdir source
+cd source
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-updates/multiverse/source/Sources.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-updates/multiverse/source/Release
+cd ..
+
+cd ..
+
+mkdir restricted
+cd restricted
+
+mkdir binary-amd64
+cd binary-amd64
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-updates/restricted/binary-amd64/Packages.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-updates/restricted/binary-amd64/Release
+cd ..
+
+mkdir source
+cd source
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-updates/restricted/source/Sources.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-updates/restricted/source/Release
+cd ..
+
+cd ..
+
+mkdir universe
+cd universe
+
+mkdir binary-amd64
+cd binary-amd64
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-updates/universe/binary-amd64/Packages.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-updates/universe/binary-amd64/Release
+cd ..
+
+mkdir source
+cd source
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-updates/universe/source/Sources.gz
+\dists\wget.exe -c ftp://br.archive.ubuntu.com/ubuntu/dists/lucid-updates/universe/source/Release
+cd ..
+
+cd ..
+
+cd ..
