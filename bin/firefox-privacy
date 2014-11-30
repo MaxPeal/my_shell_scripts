@@ -1,0 +1,24 @@
+#!/bin/bash
+case "$1" in
+    "-p")
+        firefox -private
+        ;;
+    "-ps")
+        firefox -private -safe-mode
+        ;;
+    "-pd")
+        MOZILLA_DISABLE_PLUGINS=1 firefox -private
+        ;;
+    "-s")
+        firefox -safe-mode
+        ;;
+    "-d")
+        MOZILLA_DISABLE_PLUGINS=1 firefox
+        ;;
+    "-sd")
+        MOZILLA_DISABLE_PLUGINS=1 firefox -safe-mode
+        ;;
+    "-a"|*)
+        MOZILLA_DISABLE_PLUGINS=1 firefox -safe-mode -private
+        ;;
+esac 
