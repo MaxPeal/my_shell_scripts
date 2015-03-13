@@ -1,5 +1,5 @@
 #!/bin/bash
 sudo update-alternatives \
-    --install "/usr/bin/x-instant-messenger" "x-instant-messenger" /home/joaomanoel/.local/instantbird/instantbird 90
+    --install "/usr/bin/x-instant-messenger" "x-instant-messenger" /home/joaomanoel/.local/instantbird-dev/instantbird 90
 sudo update-alternatives \
-    --set "x-instant-messenger" /home/joaomanoel/.local/instantbird/instantbird
+    --set "x-instant-messenger" /home/joaomanoel/.local/instantbird-dev/instantbird

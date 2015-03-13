@@ -1,0 +1,194 @@
+#!/bin/bash
+# ---------------------------------------------------------------------
+# Written for CrunchBang Linux <http://crunchbang.org/>
+# by Philip Newborough (aka corenominal) <corenominal@corenominal.org>
+# ---------------------------------------------------------------------
+
+pathto=$(readlink -f "$0" | sed 's%/*[^/]\+/*$%%')
+
+if [[ -f $pathto/cb-include.cfg ]]
+then
+    source "$pathto/cb-include.cfg"
+else
+    echo "  Failed to locate cb-include.cfg"
+    exit 1
+fi
+
+I=0
+
+if [ "$1" = "--viewer" ]; then
+    terminator --title="Install VNC Viewer" --command="cb-remote-desktop-pipemenu --install-viewer"
+    exit 0
+fi
+
+if [ "$1" = "--server" ]; then
+    terminator --title="Install VNC Server" --command="cb-remote-desktop-pipemenu --install-server"
+    exit 0
+fi
+
+if [ "$1" = "--install-viewer" ]; then
+    clear
+    echo ""
+    echo "  INSTALL REMOTE DESKTOP CLIENT"
+    echo "  -----------------------------"
+    echo "  This script will install TightVNC Viewer."
+    echo ""
+    echo -n "  Run the installer now? (Y|n) > "
+    read a
+    if [ "$a" = "y" ] || [ "$a" = "Y" ] || \
+    [ "$a" = "" ]; then
+        
+        connectiontest
+        
+        #update sources
+        echo "  Updating sources..."
+		sleep 2s
+		sudo apt-get update
+		clear
+        
+        
+        if ! sudo apt-get install -y xtightssvnc; then
+            clear
+            echo ""
+            echo "  There was a problem installing TightVNC viewer."
+            echo ""
+            echo "  Hit any key to try again, or \"q\" to quit..."
+            read -n1 a
+            if [ "$a" = "q" ] || [ "$a" = "Q" ]; then
+                clear
+                exit 0
+            else
+                cb-remote-desktop-pipemenu --install-viewer
+                exit 0
+            fi
+        else
+            clear
+            echo ""
+            echo "  TightVNC viewer has been installed successfully."
+            echo ""
+            echo "  Hit any key to exit..."
+            read -n1 a
+            exit 0
+        fi
+    else
+        exit 0
+    fi
+fi
+
+if [ "$1" = "--install-server" ]; then
+    clear
+    echo ""
+    echo "  INSTALL REMOTE DESKTOP SERVER"
+    echo "  -----------------------------"
+    echo "  This script will install x11vnc and vnc-java."
+    echo ""
+    echo -n "  Run the installer now? (Y|n) > "
+    read a
+    if [ "$a" = "y" ] || [ "$a" = "Y" ] || \
+    [ "$a" = "" ]; then
+        
+        connectiontest
+        
+        #update sources
+        echo "  Updating sources..."
+		sleep 2s
+		sudo apt-get update
+		clear
+        
+        
+        if ! sudo apt-get install -y x11vnc vnc-java; then
+            clear
+            echo ""
+            echo "  There was a problem installing x11vnc and/or vnc-java."
+            echo ""
+            echo "  Hit any key to try again, or \"q\" to quit..."
+            read -n1 a
+            if [ "$a" = "q" ] || [ "$a" = "Q" ]; then
+                clear
+                exit 0
+            else
+                cb-remote-desktop-pipemenu --install-server
+                exit 0
+            fi
+        else
+            clear
+            echo ""
+            echo "  x11vnc and vnc-java has been installed successfully."
+            echo ""
+            echo "  Hit any key to exit..."
+            read -n1 a
+            exit 0
+        fi
+    else
+        exit 0
+    fi
+fi
+
+# Start pipemenu
+echo "    <openbox_pipe_menu>"
+
+# Viewer
+if [ -x "/home/joaomanoel/.local/bin/ssvnc" ];then
+    cat << _menu_
+	    <item label="Viewer">
+            <action name="Execute">
+				<command>
+					ssvnc
+				</command>
+			</action>
+		</item>
+		<separator/>
+_menu_
+else
+    cat << _menu_
+	    <item label="Install Viewer">
+            <action name="Execute">
+				<command>
+					cb-remote-desktop-pipemenu --viewer
+				</command>
+			</action>
+		</item>
+		<separator/>
+_menu_
+fi
+
+# Server
+if [ -x "/usr/bin/x11vnc" -a -d "/usr/share/vnc-java" ];then
+
+	if [ "$(pidof x11vnc)" ];then
+		cat << _menu_
+	    <item label="Stop VNC Server">
+            <action name="Execute">
+				<command>
+                    x11vnc-server.sh stop
+				</command>
+			</action>
+		</item>
+_menu_
+	else
+		cat << _menu_
+	    <item label="Start VNC Server">
+            <action name="Execute">
+				<command>
+                    x11vnc-server.sh start
+				</command>
+			</action>
+		</item>
+_menu_
+	fi
+
+else
+	cat << _menu_
+	    <item label="Install VNC Server">
+            <action name="Execute">
+				<command>
+					cb-remote-desktop-pipemenu --server
+				</command>
+			</action>
+		</item>
+_menu_
+fi
+
+# End pipemenu
+echo "    </openbox_pipe_menu>"
+exit 0

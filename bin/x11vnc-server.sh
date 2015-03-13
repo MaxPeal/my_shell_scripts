@@ -1,8 +1,9 @@
 #!/bin/bash
 
 stop() {
-    test -f ~/.vnc/x11vnc.pid && \
+    if [ -f ~/.vnc/x11vnc.pid ]; then
         ( kill -9 `cat ~/.vnc/x11vnc.pid`; rm -f ~/.vnc/x11vnc.pid )
+    fi
 }
 
 start () {
@@ -16,16 +17,16 @@ start () {
         -forever \
         -usepw \
         -rmflag create:/home/joaomanoel/.vnc/x11vnc.pid \
-        -httpdir /usr/share/x11vnc/classes/ssl/ \
+        -httpdir /usr/share/vnc-java/ \
         -httpport 57100 \
         -rfbport 56100
 }
 
-if [ "X${1}X" = "XstartX" ]; then
+if [ "${1}" = "start" ]; then
     stop
     sleep 0.5
     start
-elif [ "X${1}X" = "XstopX" ]; then
+elif [ "${1}" = "stop" ]; then
     stop
 else
     echo -e "usage:\t`basename ${0}`\tstart|stop"
