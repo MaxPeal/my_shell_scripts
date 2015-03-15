@@ -51,5 +51,11 @@ git clone https://github.com/cwood/vim-django.git
 git clone https://github.com/jmcomets/vim-pony.git
 git clone https://github.com/jamessan/vim-gnupg.git
 git clone https://github.com/jmanoel7/conque.git
+git clone https://github.com/tpope/vim-rails.git
+git clone https://github.com/tpope/vim-rake.git
+git clone https://github.com/tpope/vim-projectionist.git
+git clone https://github.com/tpope/vim-bundler.git
+git clone https://github.com/tpope/vim-abolish.git
+git clone https://github.com/tpope/vim-repeat.git
 
 exit 0
