@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python2
 # -*- coding: utf-8 -*-
 
 
@@ -35,7 +35,11 @@ if __name__ == '__main__':
     data_fim = data_fim.split("/")
 
     try:
-        data_inicio = date(int(data_inicio[2]), int(data_inicio[1]), int(data_inicio[0]))
+        data_inicio = date(
+            int(data_inicio[2]),
+            int(data_inicio[1]),
+            int(data_inicio[0])
+        )
     except:
         print_help()
         sys.exit(2)
@@ -58,4 +62,3 @@ if __name__ == '__main__':
         print data.strftime('%d %B %Y')
 
     sys.exit(0)
-

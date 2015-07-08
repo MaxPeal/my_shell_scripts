@@ -1,9 +1,8 @@
 #!/bin/bash
 
 stop() {
-    if [ -f ~/.vnc/x11vnc.pid ]; then
+    test -f ~/.vnc/x11vnc.pid && \
         ( kill -9 `cat ~/.vnc/x11vnc.pid`; rm -f ~/.vnc/x11vnc.pid )
-    fi
 }
 
 start () {
@@ -17,7 +16,7 @@ start () {
         -forever \
         -usepw \
         -rmflag create:/home/joaomanoel/.vnc/x11vnc.pid \
-        -httpdir /usr/share/vnc-java/ \
+        -httpdir /usr/share/x11vnc/classes/ssl/ \
         -httpport 57100 \
         -rfbport 56100
 }

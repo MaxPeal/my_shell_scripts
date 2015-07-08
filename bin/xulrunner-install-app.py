@@ -38,7 +38,7 @@ elif sys.platform == "win32":
         return leafName + ".exe"
 
 elif sys.platform == "darwin":
-    xulrunnerStubName = "xulrunner"
+    xulrunnerStubName = "xulrunner-stub"
 
     def installApp(appLocation, installDir, appName, greDir):
         zipApp, iniparser, appName = validateArguments(appLocation, installDir, appName, greDir)
@@ -180,7 +180,7 @@ def handleCommandLine():
     # Argument parsing.
     parser = argparse.ArgumentParser(
         description="XULRunner application installer",
-        usage="""install_app.py appLocation installDir [--greDir GREDIR --appName APPNAME]
+        usage="""install_app.py appLocation installDir --greDir GREDIR --appName APPNAME
            install_app.py -h
            install_app.py --version
     """
@@ -212,6 +212,7 @@ def handleCommandLine():
     cmds = parser.parse_args()
     try:
         installApp(cmds.appLocation, cmds.installDir, cmds.appName, cmds.greDir)
+
     except Exception as exn:
         if os.path.exists(cmds.installDir):
             shutil.rmtree(cmds.installDir)

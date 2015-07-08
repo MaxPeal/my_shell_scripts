@@ -22,7 +22,6 @@ wget -c http://dlc.sun.com.edgesuite.net/virtualbox/${1}/Oracle_VM_VirtualBox_Ex
 wget -c http://dlc.sun.com.edgesuite.net/virtualbox/${1}/SDKRef.pdf
 wget -c http://dlc.sun.com.edgesuite.net/virtualbox/${1}/UserManual.pdf
 wget -c http://dlc.sun.com.edgesuite.net/virtualbox/${1}/VBoxGuestAdditions_${1}.iso
-wget -c http://dlc.sun.com.edgesuite.net/virtualbox/${1}/VirtualBox-${1}.tar.bz2
 wget -c http://dlc.sun.com.edgesuite.net/virtualbox/${1}/VirtualBoxSDK-${1}-${2}.zip
 wget -c http://dlc.sun.com.edgesuite.net/virtualbox/${1}/virtualbox-${a}.${b}_${1}-${2}~${distname}~${codename}_${march}.deb
 
