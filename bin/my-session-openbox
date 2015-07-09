@@ -1,0 +1,13 @@
+#!/bin/sh
+xrdb -load ~/.Xresources
+compton -b -f -m 0.95
+nitrogen --restore
+#gpg-agent --daemon --sh
+volumeicon &
+#clipit &
+#nm-applet &
+dropbox start -i &
+#/opt/teamviewer/tv_bin/script/teamviewer &
+x-terminal-emulator &
+tint2 -c ~/.config/tint2/openbox.tint2rc &
+exec /usr/bin/openbox-session
