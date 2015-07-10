@@ -8,5 +8,6 @@ compton -b -f -m 0.95
 #nm-applet &
 #dropbox start -i &
 #/opt/teamviewer/tv_bin/script/teamviewer &
-x-terminal-emulator --geometry=980x320+150+200 &
+terminator --geometry=980x320+150+200 &
+#urxvtq &
 exec /usr/bin/razor-session

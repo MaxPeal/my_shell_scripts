@@ -2,7 +2,7 @@
 
 wid=$(xdotool search --classname urxvtq | grep -m 1 "")
 if [ -z "$wid" ]; then
-  /home/joaomanoel/bin/urxvtc -name urxvtq -geometry 80x28
+  urxvtc +sb -name urxvtq -pe 'kuake<F12>' -geometry 80x24
   wid=$(xdotool search --classname urxvtq | head -1)
   xdotool windowfocus "$wid"
   xdotool key Control_L+l
