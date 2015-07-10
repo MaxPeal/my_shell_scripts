@@ -1,2 +1,2 @@
 #!/bin/sh
-exec startx ~/.xinitrc.urxvt -- -multiwindow
+exec startx ~/.xinitrc.urxvt -- :0 -multiwindow

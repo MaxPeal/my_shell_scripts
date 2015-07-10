@@ -16,7 +16,7 @@ if [ -z "$6" -o -n "$7" -o "$1" != "-u" -o "$3" != "-p" -o "$5" != "-o" ]; then
 fi
 
 # Definindo o diretorio temporario para armazenar os dados em json
-TEMPDIR="$(mktemp -d ~/tmp/sistec.XXXXXX)"
+TEMPDIR="$(mktemp -d /tmp/sistec.XXXXXX)"
 
 # Definindo o ID (usuario) e a PW (senha) a partir dos parametros informados
 ID="$2"
@@ -131,17 +131,22 @@ LOCATION_AUTH_POST="$( \
 
 echo "LOCATION_AUTH_POST=$LOCATION_AUTH_POST"
 
+INSTITUICOES="$( \
+    curl \
+        -o - \
+        -L "$LOCATION_AUTH_POST" \
+        $CURL_OPTS \
+        -H "Host: $HOST_SISTEC" \
+        -b "$COOKIE_PHPSESSID; $COOKIE_ZDE_DEBUGGER_PRESENT" \
+        2>/dev/null | \
+    dos2unix | \
+    sed -ne '/^[[:blank:]]*<select.*>$/,/^[[:blank:]]*<\/select>$/p' | \
+    sed 's/^[[:blank:]]*<select.*>$//' | \
+    sed 's/^[[:blank:]]*<\/select>$//' | \
+    sed 's/^[[:blank:]]*<option.*>Selecione\.\.\.<\/option>//'
+)"
 
-curl \
-    -o "$TEMPDIR/instituicoes.html" \
-    -L "$LOCATION_AUTH_POST" \
-    $CURL_OPTS \
-    -H "Host: $HOST_SISTEC" \
-    -b "$COOKIE_PHPSESSID; $COOKIE_ZDE_DEBUGGER_PRESENT" \
-    2>/dev/null
-
-dos2unix "$TEMPDIR/instituicoes.html"
-sed -ne '/^[[:blank:]]*<select.*>$/,/^[[:blank:]]*<\/select>$/p' "$TEMPDIR/instituicoes.html"
+echo "$INSTITUICOES"
 
 # Download dos campus disponiveis
 #curl "http://sistec.mec.gov.br/index/selecionarinstituicao/" \
