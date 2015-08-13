@@ -1,2 +1,2 @@
 #!/bin/sh
-exec "$HOME/.xinitrc" /usr/bin/i3
+exec "$HOME/.xinitrc" i3
