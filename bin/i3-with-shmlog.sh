@@ -1,2 +1,2 @@
 #!/bin/sh
-exec "$HOME/.xinitrc" i3-with-shmlog
+exec "$HOME/.xinitrc" /usr/bin/i3-with-shmlog
