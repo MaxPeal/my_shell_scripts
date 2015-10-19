@@ -8,17 +8,13 @@
 
 if [ "$(pidof conky)" ]; then
     killall -9 conky
-    test -f ~/.conky/music.conkyrc    && conky -q -c ~/.conky/music.conkyrc
-    test -f ~/.conky/hardware.conkyrc && conky -q -c ~/.conky/hardware.conkyrc
-    test -f ~/.conky/system.conkyrc   && conky -q -c ~/.conky/system.conkyrc
-    test -f ~/.conky/weather.conkyrc  && conky -q -c ~/.conky/weather.conkyrc
-    test -f ~/.conkyrc                && conky -q -c ~/.conkyrc
-    exit
-else
-    test -f ~/.conky/music.conkyrc    && conky -q -c ~/.conky/music.conkyrc
-    test -f ~/.conky/hardware.conkyrc && conky -q -c ~/.conky/hardware.conkyrc
-    test -f ~/.conky/system.conkyrc   && conky -q -c ~/.conky/system.conkyrc
-    test -f ~/.conky/weather.conkyrc  && conky -q -c ~/.conky/weather.conkyrc
-    test -f ~/.conkyrc                && conky -q -c ~/.conkyrc
-    exit
 fi
+
+test -f ~/.conky/music.conkyrc    && conky -q -c ~/.conky/music.conkyrc
+test -f ~/.conky/hardware.conkyrc && conky -q -c ~/.conky/hardware.conkyrc
+test -f ~/.conky/system.conkyrc   && conky -q -c ~/.conky/system.conkyrc
+test -f ~/.conky/weather.conkyrc  && conky -q -c ~/.conky/weather.conkyrc
+test -f ~/.conky/emails.conkyrc   && conky -q -c ~/.conky/emails.conkyrc
+#test -f ~/.conkyrc                && conky -q -c ~/.conkyrc
+
+exit
