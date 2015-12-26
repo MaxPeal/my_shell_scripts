@@ -17,4 +17,4 @@ nm-applet &
 #nautilus --no-default-window --no-desktop &
 urxvt &
 
-exec /usr/bin/i3-with-shmlog
+exec /usr/bin/jwm
