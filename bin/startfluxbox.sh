@@ -17,4 +17,4 @@ fi
 #(sleep 5; /opt/teamviewer/tv_bin/script/teamviewer) &
 (sleep 5; urxvt) &
 
-exec /usr/bin/i3-with-shmlog
+exec /usr/bin/startfluxbox

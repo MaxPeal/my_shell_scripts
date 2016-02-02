@@ -5,6 +5,7 @@ if [ -f ~/.xsessionrc ]; then
 fi
 
 (sleep 1; thunar --daemon) &
+(sleep 1; wmsystemtray) &
 (sleep 2; nm-applet) &
 (sleep 3; compton -b -f -m 0.95) &
 (sleep 3; fbsetroot -solid '#2E3436') &
@@ -17,4 +18,4 @@ fi
 #(sleep 5; /opt/teamviewer/tv_bin/script/teamviewer) &
 (sleep 5; urxvt) &
 
-exec /usr/bin/i3-with-shmlog
+exec /usr/bin/wmaker
