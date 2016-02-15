@@ -1,8 +1,14 @@
 #!/bin/sh
 
 if [ -z "$3" -o -n "$4" ]; then
-    echo "\n\a\tUsage: `basename $0` <user> <server> <size>\n"
+    echo "\n\a\tUsage: `basename $0` <size> <user> <server>\n"
     exit 1
 fi
 
-exec xfreerdp /flag +window-drag +clipboard /u:$1 /v:$2 /size:$3 /drive:home,/home/user
+#exec xfreerdp \
+#    /flag +window-drag +clipboard /drive:home,$HOME \
+#    /size:$1 /u:$2 /v:$3
+
+exec rdesktop \
+    -g $1 -u $2 -d ifg.br -p - -k pt-br -K \
+    -r sound:local:alsa -r clipboard:PRIMARYCLIPBOARD -r disk:home=$HOME $3
