@@ -1,0 +1,62 @@
+#!/bin/bash
+#
+# bl-tint2-pipemenu
+# Written for BunsenLabs Linux by damo <damo@bunsenlabs.org> April 2015
+
+BL_COMMON_LIBDIR='/usr/lib/bunsen/bunsen-common'
+
+TINT2PATH="$HOME/.config/tint2"
+TINT2RC="$TINT2PATH/tint2rc"
+TZEN="bl-tint2zen"
+
+if ! . "$BL_COMMON_LIBDIR/bl-include.cfg" 2> /dev/null; then
+    echo $"Error: Failed to locate bl-include.cfg in $BL_COMMON_LIBDIR" >&2
+    exit 1
+fi
+
+loadTEditmenu(){
+    menuSeparator 
+    menuItem "Default tint2rc" "bl-text-editor $TINT2RC"
+    if [ "$(pidof tint2)" ];then
+        menuSubmenu "RunningTint2" "Running Tint2s"
+        pgrep -a tint2 | while read pid cmd; do 
+            if [[ ${cmd%% *} = tint2 ]]; then
+                TINT=${cmd##* }
+                TINT2=${TINT#$HOME/.config/}
+                if [[ $TINT = tint2 ]];then
+                    TINT="$TINT2RC"
+                    TINT2="Default tint2rc"
+                fi
+                menuItem "$TINT2" "bl-text-editor $TINT"
+            fi
+        done
+        menuSubmenuEnd
+    fi
+}
+
+getTint2s(){
+    menuSubmenu "EditTint2" "Edit Tint2s"
+        if type bl-tint2edit &>/dev/null;then  # bl-tint2edit script found
+            menuItem "Tint2 Editor" "bl-tint2edit"
+            loadTEditmenu
+        else
+            loadTEditmenu
+        fi
+    menuSubmenuEnd
+}
+
+loadRestartmenu(){
+    if [ "$(pidof tint2)" ];then
+        if type bl-tint2restart &>/dev/null;then  # bl-tint2restart script found
+            menuItem "Restart Tint2" "bl-tint2restart"
+        fi
+    fi
+}
+
+menuStart "Tintmenu" "Tint2"
+menuItem "Tint2 Chooser" "$TZEN"
+loadRestartmenu
+getTint2s
+menuEnd
+
+

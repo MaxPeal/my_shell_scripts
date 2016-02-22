@@ -1,0 +1,61 @@
+#!/bin/bash
+# ---------------------------------------------------------------------
+# Pipemenu to install remote desktop software on Bunsen Labs Linux.
+# Originally written for CrunchBang Linux <http://crunchbang.org/>
+# by Philip Newborough (aka corenominal) <corenominal@corenominal.org>
+# ---------------------------------------------------------------------
+BL_COMMON_LIBDIR='/usr/lib/bunsen/bunsen-common'
+
+if ! . "$BL_COMMON_LIBDIR/bl-include.cfg" 2> /dev/null; then
+    echo $"Error: Failed to locate bl-include.cfg in $BL_COMMON_LIBDIR" >&2
+    exit 1
+fi
+
+if [[ $1 = --install ]]; then
+    case $2 in
+    viewer)
+        terminalCheck -T "Install VNC Viewer" "$@"
+        promptInstall 'REMOTE DESKTOP CLIENT' 'This script will install TightVNC Viewer.' 'xtightvncviewer'
+        ;;
+    server)
+        terminalCheck -T "Install VNC Server" "$@"
+        promptInstall  'REMOTE DESKTOP SERVER' 'This script will install Vino VNC server.' 'vino'
+        ;;
+    *)
+        echo "$0: no such install option $2"
+        exit 1
+        ;;
+    esac
+
+elif [[ $1 ]]; then
+    echo "$0: no such option $*" >&2
+    exit 1
+
+else
+    # Pipemenu
+    menuStart
+
+    # Viewer
+    if type 'xtightvncviewer' &> /dev/null; then
+        menuItem 'Viewer' 'vncviewer'
+    else
+        menuItem 'Install Viewer' "$0 --install viewer"
+    fi
+
+    menuSeparator
+
+    # Server
+    if [[ -x /usr/lib/vino/vino-server ]]; then
+        if pidof -s vino-server > /dev/null; then
+            menuItem 'Stop VNC Server' 'killall vino-server'
+        else
+            menuItem 'Start VNC Server' '/usr/lib/vino/vino-server'
+        fi
+        menuItem 'VNC Server Preferences' 'vino-preferences'
+    else
+        menuItem 'Install VNC Server' "$0 --install server"
+    fi
+
+    menuEnd
+fi
+exit 0
