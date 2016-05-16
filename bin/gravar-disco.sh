@@ -6,8 +6,8 @@ then
 	exit -1
 fi
 
-test ! -f "${2}.sha1" && \
-	sha1sum "${2}" > "${2}.sha1"
+test ! -f "${2}.sha256" && \
+	sha256sum "${2}" > "${2}.sha256"
 
 if [ "${1}" = "-dvd" ]
 then
@@ -21,10 +21,13 @@ echo -e -n "\n\tDEPOIS DIGITE <ENTER> PARA CONTINUAR ..."
 read
 sleep 30
 
-test "`cat $3 | sha1sum | sed 's/^\([a-f0-9]\{,41\}\).*$/\1/'`" = "`sed 's/^\([a-f0-9]\{,41\}\).*$/\1/' "${2}.sha1"`" && \
+if [ "$(cat $3 | sha256sum | sed 's/^\([a-f0-9]\{,65\}\).*$/\1/')" == "$(sed 's/^\([a-f0-9]\{,65\}\).*$/\1/' "${2}.sha256")" ]; then
 	echo -e "\n\tA GRAVAÇÃO FOI UM SUCESSO!\n"
+else
+    echo -e "\n\tA GRAVAÇÃO FALHOU!\n"
+fi
 
 #dd if=$3 of="${2}.1"
 #mv -f "${2}"   "${2}.orig"
 #mv -f "${2}.1" "${2}"
-#sha1sum -c "${2}.sha1"
+#sha256sum -c "${2}.sha256"
