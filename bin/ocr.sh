@@ -1,9 +1,23 @@
-#!/bin/bash
+#!/bin/sh
 
-for i in $@; do
-	echo -ne "\t$i => `basename $i .tif`.txt ... "
-	tesseract $i `basename $i .tif` -l por 2> /dev/null
-	echo "OK"
+echo -e "\n\tTESSERACT OCR IN FILES:\n"
+
+for input in $@; do
+
+    output="$(basename "${input}" ".tiff")"
+
+    echo -en "\t\t\"${input}\" to \"${output}.txt\" ... "
+
+    tesseract "${input}" "${output}" -l por >/dev/null 2>&1
+
+    if [ $? == 0 ]; then
+        echo -e "OK\n"
+    else
+        echo -e "NOT OK\n"
+    fi
+
 done
 
+echo ""
 
+exit 0
