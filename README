@@ -20,4 +20,4 @@ Uma copia da GPL 3 se encontra em "LICENSE"
 
 Os scripts estão no diretório "bin"
 Exemplos de uso de shell scripts com dialog estão no diretório "dialog"
-Exemplos de uso do sed emulando comandos de shell scripts estão no diretório "sed"
+Exemplos de uso do sed emulando comandos de shell e um ebook do Aurélio sobre sed estão no diretório "sed"
