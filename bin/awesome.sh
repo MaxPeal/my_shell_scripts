@@ -22,4 +22,4 @@ fi
 (sleep 5; i3-sensible-terminal) &
 (sleep 5; killall -9 gnome-keyring-daemon >/dev/null 2>&1) &
 
-exec /usr/bin/startfluxbox
+exec /usr/bin/awesome
