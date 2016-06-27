@@ -1,6 +1,12 @@
 #!/bin/sh
 
+if [ "$MSYSTEM" == "MINGW64" ]; then
+    export TESSDATA_PREFIX="/mingw64/share"
+fi
+
 echo -e "\n\tTESSERACT OCR IN FILES:\n"
+
+IFS=$'\n'
 
 for input in $@; do
 
