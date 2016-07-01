@@ -15,7 +15,7 @@ fi
 #(sleep 3; volumeicon) &
 (sleep 3; clipit) &
 (sleep 4; dropbox start -i) &
-(sleep 4; pamac-tray) &
+#(sleep 4; pamac-tray) &
 #(sleep 4; hp-systray -x) &
 #(sleep 4; /opt/teamviewer/tv_bin/script/teamviewer) &
 (sleep 4; conkywonky.sh) &
