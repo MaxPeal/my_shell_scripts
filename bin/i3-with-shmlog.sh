@@ -10,8 +10,8 @@ fi
 (sleep 2; xsetroot -solid '#2E3436') &
 #(sleep 2; nitrogen --restore) &
 (sleep 2; compton -b -f -m 0.95) &
-(sleep 3; volti) &
-#(sleep 3; volumeicon) &
+#(sleep 3; volti) &
+(sleep 3; volumeicon) &
 (sleep 3; clipit) &
 (sleep 4; dropbox start -i) &
 #(sleep 4; pamac-tray) &
