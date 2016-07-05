@@ -14,11 +14,11 @@ fi
 #(sleep 3; volumeicon) &
 (sleep 3; clipit) &
 (sleep 4; dropbox start -i) &
-#(sleep 4; pamac-tray) &
+(sleep 4; pamac-tray) &
 #(sleep 4; hp-systray -x) &
 #(sleep 4; /opt/teamviewer/tv_bin/script/teamviewer) &
-(sleep 4; conkywonky.sh) &
-(sleep 5; i3-sensible-terminal) &
+#(sleep 4; conkywonky.sh) &
+(sleep 5; terminator.wrapper) &
 (sleep 5; killall -9 gnome-keyring-daemon >/dev/null 2>&1) &
 
-exec /usr/bin/i3-with-shmlog
+exec /usr/bin/wmaker

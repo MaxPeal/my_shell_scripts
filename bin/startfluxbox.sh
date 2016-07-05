@@ -7,8 +7,7 @@ fi
 (sleep 1; killall -9 gnome-keyring-daemon >/dev/null 2>&1) &
 (sleep 1; thunar --daemon) &
 (sleep 1; nm-applet) &
-(sleep 2; xsetroot -solid '#2E3436') &
-#(sleep 2; fbsetroot -solid '#2E3436') &
+(sleep 2; fbsetroot -solid '#2E3436') &
 #(sleep 2; nitrogen --restore) &
 (sleep 2; compton -b -f -m 0.95) &
 (sleep 3; volti) &
@@ -19,7 +18,7 @@ fi
 #(sleep 4; hp-systray -x) &
 #(sleep 4; /opt/teamviewer/tv_bin/script/teamviewer) &
 (sleep 4; conkywonky.sh) &
-(sleep 5; i3-sensible-terminal) &
+(sleep 5; terminator.wrapper) &
 (sleep 5; killall -9 gnome-keyring-daemon >/dev/null 2>&1) &
 
 exec /usr/bin/startfluxbox
