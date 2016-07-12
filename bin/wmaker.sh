@@ -5,7 +5,10 @@ if [ -f ~/.xsessionrc ]; then
 fi
 
 (sleep 0.5; wmsystemtray) &
-(sleep 1; killall -9 gnome-keyring-daemon >/dev/null 2>&1) &
+(sleep 0.5; wmtime -digital) &
+(sleep 0.5; wmtimer -b -a) &
+(sleep 0.5; wmdiskmon -bl -p /dev/sda1 -p /dev/sda3 -p /dev/sda4) &
+#(sleep 1; killall -9 gnome-keyring-daemon >/dev/null 2>&1) &
 (sleep 1; thunar --daemon) &
 (sleep 1; nm-applet) &
 (sleep 2; xsetroot -solid '#2E3436') &
@@ -20,6 +23,6 @@ fi
 #(sleep 4; /opt/teamviewer/tv_bin/script/teamviewer) &
 #(sleep 4; conkywonky.sh) &
 (sleep 5; terminator.wrapper) &
-(sleep 5; killall -9 gnome-keyring-daemon >/dev/null 2>&1) &
+#(sleep 5; killall -9 gnome-keyring-daemon >/dev/null 2>&1) &
 
 exec /usr/bin/wmaker
