@@ -13,7 +13,7 @@ fi
 test -f ~/.conky/music.conkyrc    && conky -q -c ~/.conky/music.conkyrc
 test -f ~/.conky/hardware.conkyrc && conky -q -c ~/.conky/hardware.conkyrc
 test -f ~/.conky/system.conkyrc   && conky -q -c ~/.conky/system.conkyrc
-test -f ~/.conky/weather.conkyrc  && conky -q -c ~/.conky/weather.conkyrc
+#test -f ~/.conky/weather.conkyrc  && conky -q -c ~/.conky/weather.conkyrc
 test -f ~/.conky/JC.conkyrc       && conky -q -c ~/.conky/JC.conkyrc
 
-exit
+exit 0

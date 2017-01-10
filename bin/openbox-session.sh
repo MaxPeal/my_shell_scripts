@@ -1,2 +1,2 @@
 #!/bin/sh
-exec "$HOME/.xinitrc" /usr/bin/openbox-session
+exec "$HOME/.xinitrc" openbox

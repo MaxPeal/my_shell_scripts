@@ -1,10 +1,18 @@
 #!/bin/sh
 
-# install pathogen
-mkdir -p ~/.vim/autoload ~/.vim/bundle
+
+################################################################################
+## install pathogen
+################################################################################
+
+mkdir -p ~/.vim/autoload ~/.vim/bundle ~/.vim/sessions ~/.vim/tags_dir
 curl -so ~/.vim/autoload/pathogen.vim https://raw.githubusercontent.com/tpope/vim-pathogen/master/autoload/pathogen.vim
 
-# install plugins
+
+################################################################################
+## install plugins
+################################################################################
+
 cd ~/.vim/bundle
 git clone https://github.com/jmanoel7/vim-colors.git
 git clone https://github.com/Lokaltog/vim-powerline.git
@@ -16,19 +24,19 @@ git clone https://github.com/tpope/vim-scriptease.git
 git clone https://github.com/dhruvasagar/vim-table-mode.git
 git clone https://github.com/vim-latex/vim-latex.git
 git clone http://github.com/mattn/emmet-vim/
+hg clone https://bitbucket.org/ns9tks/vim-l9
+hg clone https://bitbucket.org/ns9tks/vim-fuzzyfinder
 git clone https://github.com/vim-scripts/mru.vim.git
 git clone https://github.com/majutsushi/tagbar
 git clone https://github.com/xolox/vim-easytags.git
 git clone https://github.com/xolox/vim-misc.git
 git clone https://github.com/scrooloose/syntastic.git
-git clone https://github.com/Valloric/YouCompleteMe.git
 git clone https://github.com/SirVer/ultisnips.git
 git clone https://github.com/honza/vim-snippets.git
 git clone --recursive https://github.com/davidhalter/jedi-vim.git
 git clone https://github.com/tmhedberg/SimpylFold.git
 git clone https://github.com/nvie/vim-pyunit.git
 git clone https://github.com/mcrute/nose-machineout.git
-git clone https://github.com/fholgado/minibufexpl.vim.git
 git clone https://github.com/tpope/vim-fugitive.git
 git clone git://github.com/tpope/vim-repeat.git
 git clone git://github.com/tpope/vim-surround.git
@@ -39,18 +47,37 @@ git clone https://github.com/xolox/vim-shell.git
 git clone https://github.com/xolox/vim-notes.git
 git clone https://github.com/vim-voom/vim-voom.github.com.git
 git clone https://github.com/vim-scripts/utl.vim.git
-git clone https://github.com/xolox/vim-session.git
 git clone https://github.com/scrooloose/nerdtree.git
 git clone https://github.com/jmcantrell/vim-virtualenv.git
 git clone https://github.com/cwood/vim-django.git
-git clone https://github.com/tpope/vim-surround.git
-git clone https://github.com/tpope/vim-repeat.git
-hg clone https://bitbucket.org/ns9tks/vim-l9
-hg clone https://bitbucket.org/ns9tks/vim-fuzzyfinder
+git clone https://github.com/ervandew/supertab.git
+git clone https://github.com/vim-scripts/OmniCppComplete.git
+git clone https://github.com/vim-scripts/SQLComplete.vim.git
+git clone https://github.com/Rip-Rip/clang_complete.git
+git clone https://github.com/amiorin/vim-project.git
+git clone https://github.com/xolox/vim-session.git
+curl -O https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/conque/conque_2.3.tar.gz
+tar -xzf conque_2.3.tar.gz && mv -f conque_2.3 Conque-Shell && rm -f conque_2.3.tar.gz
 
-# configure plugins
-cd ~/.vim/bundle/YouCompleteMe
-git submodule update --init --recursive
+
+################################################################################
+## configure plugins
+################################################################################
+
+# jedi-vim
+sudo pip2 install --force-reinstall -U jedi
+
+# vim-pyunit
+sudo pip2 install --force-reinstall -U nose vim_bridge mock
+mkdir -p ~/src
+cd ~/src
+git clone https://github.com/mcrute/nose-machineout.git
+cd nose-machineout
+sudo python2 ./setup.py install
+
+# YouCompleteMe
+#cd ~/.vim/bundle/YouCompleteMe
+#git submodule update --init --recursive
 #./install.py --clang-completer --system-libclang --system-boost --omnisharp-completer --gocode-completer --tern-completer
 #cd ~/.vim/bundle/YouCompleteMe/third_party/ycmd/
 #rm *.dll *.dll.a
