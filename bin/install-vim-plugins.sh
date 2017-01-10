@@ -56,6 +56,7 @@ git clone https://github.com/vim-scripts/SQLComplete.vim.git
 git clone https://github.com/Rip-Rip/clang_complete.git
 git clone https://github.com/amiorin/vim-project.git
 git clone https://github.com/xolox/vim-session.git
+git clone https://github.com/jmanoel7/Vim-JDE.git
 curl -O https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/conque/conque_2.3.tar.gz
 tar -xzf conque_2.3.tar.gz && mv -f conque_2.3 Conque-Shell && rm -f conque_2.3.tar.gz
 
@@ -74,6 +75,9 @@ cd ~/src
 git clone https://github.com/mcrute/nose-machineout.git
 cd nose-machineout
 sudo python2 ./setup.py install
+
+# Vim-JDE
+chmod a+x ~/.vim/bundle/Vim-JDE/plugin/vjde/readtags
 
 # YouCompleteMe
 #cd ~/.vim/bundle/YouCompleteMe
