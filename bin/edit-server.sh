@@ -1,7 +1,12 @@
 #!/bin/sh
 
-test -d ~/git/edit-server && \
-cd ~/git/edit-server && \
-./edit-server $@
+if [ -x "$1" ]
+then
+    USE_EDITOR="$1"
+    shift
+else
+    USE_EDITOR="/usr/bin/gedit"
+fi
 
-exit 0
+cd ~/git/edit-server && \
+exec ./edit-server "$USE_EDITOR" $@

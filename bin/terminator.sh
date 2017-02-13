@@ -5,14 +5,16 @@ then
     if [ -d "$1" ]
     then
         workdir="$1"
+        shift
     elif [ -f "$1" ]
     then
         workdir="$(dirname "$1")"
+        shift
+    else
+        workdir="$HOME"
     fi
 else
     workdir="$HOME"
 fi
 
-shift
-
-exec /usr/sbin/terminator.wrapper --working-directory="$workdir" $@
+exec /usr/bin/terminator.wrapper --working-directory="$workdir" $@
