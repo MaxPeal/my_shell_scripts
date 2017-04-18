@@ -5,7 +5,7 @@
 ## install pathogen
 ################################################################################
 
-mkdir -p ~/.vim/autoload ~/.vim/bundle ~/.vim/sessions ~/.vim/tags_dir
+mkdir -p ~/.vim/autoload ~/.vim/bundle
 curl -so ~/.vim/autoload/pathogen.vim https://raw.githubusercontent.com/tpope/vim-pathogen/master/autoload/pathogen.vim
 
 
@@ -13,6 +13,7 @@ curl -so ~/.vim/autoload/pathogen.vim https://raw.githubusercontent.com/tpope/vi
 ## install plugins
 ################################################################################
 
+mkdir -p ~/.vim/sessions ~/.vim/tags_dir
 cd ~/.vim/bundle
 git clone https://github.com/jmanoel7/vim-colors.git
 git clone https://github.com/Lokaltog/vim-powerline.git
@@ -56,9 +57,9 @@ git clone https://github.com/vim-scripts/SQLComplete.vim.git
 git clone https://github.com/Rip-Rip/clang_complete.git
 git clone https://github.com/amiorin/vim-project.git
 git clone https://github.com/xolox/vim-session.git
-git clone https://github.com/jmanoel7/Vim-JDE.git
-curl -O https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/conque/conque_2.3.tar.gz
-tar -xzf conque_2.3.tar.gz && mv -f conque_2.3 Conque-Shell && rm -f conque_2.3.tar.gz
+curl -s -o - https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/conque/conque_2.3.tar.gz | \
+    tar -x -z && \
+    mv -f conque_2.3 Conque-Shell
 
 
 ################################################################################
@@ -66,18 +67,21 @@ tar -xzf conque_2.3.tar.gz && mv -f conque_2.3 Conque-Shell && rm -f conque_2.3.
 ################################################################################
 
 # jedi-vim
-sudo pip2 install --force-reinstall -U jedi
+pip2 install --force-reinstall -U jedi
 
 # vim-pyunit
-sudo pip2 install --force-reinstall -U nose vim_bridge mock
-mkdir -p ~/src
-cd ~/src
+pip2 install --force-reinstall -U nose vim_bridge mock
+mkdir -p /tmp/vim-plugin-build
+cd /tmp/vim-plugin-build
+rm -rf nose-machineout
 git clone https://github.com/mcrute/nose-machineout.git
 cd nose-machineout
-sudo python2 ./setup.py install
+python2 ./setup.py install
+cd ~
+rm -rf /tmp/vim-plugin-build
 
 # Vim-JDE
-chmod a+x ~/.vim/bundle/Vim-JDE/plugin/vjde/readtags
+#chmod a+x ~/.vim/bundle/Vim-JDE/plugin/vjde/readtags
 
 # YouCompleteMe
 #cd ~/.vim/bundle/YouCompleteMe

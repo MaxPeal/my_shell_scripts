@@ -17,4 +17,4 @@ else
     workdir="$HOME"
 fi
 
-exec /usr/bin/terminator.wrapper --working-directory="$workdir" $@
+exec /usr/bin/terminator --working-directory="$workdir" $@
