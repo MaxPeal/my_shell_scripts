@@ -2,18 +2,17 @@
 
 
 ################################################################################
-## install pathogen
+## Install Pathogen
 ################################################################################
 
-mkdir -p ~/.vim/autoload ~/.vim/bundle
+mkdir -p ~/.vim/autoload ~/.vim/bundle ~/.vim/sessions ~/.vim/tags_dir
 curl -so ~/.vim/autoload/pathogen.vim https://raw.githubusercontent.com/tpope/vim-pathogen/master/autoload/pathogen.vim
 
 
 ################################################################################
-## install plugins
+## Install Plugins
 ################################################################################
 
-mkdir -p ~/.vim/sessions ~/.vim/tags_dir
 cd ~/.vim/bundle
 git clone https://github.com/jmanoel7/vim-colors.git
 git clone https://github.com/Lokaltog/vim-powerline.git
@@ -25,8 +24,8 @@ git clone https://github.com/tpope/vim-scriptease.git
 git clone https://github.com/dhruvasagar/vim-table-mode.git
 git clone https://github.com/vim-latex/vim-latex.git
 git clone http://github.com/mattn/emmet-vim/
-hg clone https://bitbucket.org/ns9tks/vim-l9
-hg clone https://bitbucket.org/ns9tks/vim-fuzzyfinder
+git clone https://github.com/vim-scripts/L9.git vim-l9
+git clone https://github.com/vim-scripts/FuzzyFinder vim-fuzzyfinder
 git clone https://github.com/vim-scripts/mru.vim.git
 git clone https://github.com/majutsushi/tagbar
 git clone https://github.com/xolox/vim-easytags.git
@@ -57,33 +56,33 @@ git clone https://github.com/vim-scripts/SQLComplete.vim.git
 git clone https://github.com/Rip-Rip/clang_complete.git
 git clone https://github.com/amiorin/vim-project.git
 git clone https://github.com/xolox/vim-session.git
-curl -s -o - https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/conque/conque_2.3.tar.gz | \
-    tar -x -z && \
-    mv -f conque_2.3 Conque-Shell
+git clone https://github.com/artur-shaik/vim-javacomplete2.git
+git clone https://github.com/mikelue/vim-maven-plugin.git
+git clone https://github.com/vim-scripts/txt2tags-menu.git
+curl -so- https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/conque/conque_2.3.tar.gz | tar xz && mv -f conque_2.3 Conque-Shell
 
 
 ################################################################################
-## configure plugins
+## Configure Plugins
 ################################################################################
 
-# jedi-vim
-pip2 install --force-reinstall -U jedi
+## jedi-vim
+pip2 install -U jedi
 
-# vim-pyunit
-pip2 install --force-reinstall -U nose vim_bridge mock
+## vim-pyunit
+pip2 install -U nose vim_bridge mock
 mkdir -p /tmp/vim-plugin-build
 cd /tmp/vim-plugin-build
-rm -rf nose-machineout
 git clone https://github.com/mcrute/nose-machineout.git
 cd nose-machineout
 python2 ./setup.py install
 cd ~
 rm -rf /tmp/vim-plugin-build
 
-# Vim-JDE
+## Vim-JDE
 #chmod a+x ~/.vim/bundle/Vim-JDE/plugin/vjde/readtags
 
-# YouCompleteMe
+## YouCompleteMe
 #cd ~/.vim/bundle/YouCompleteMe
 #git submodule update --init --recursive
 #./install.py --clang-completer --system-libclang --system-boost --omnisharp-completer --gocode-completer --tern-completer
@@ -94,3 +93,6 @@ rm -rf /tmp/vim-plugin-build
 #cd build/
 #/mingw64/bin/cmake -G"MSYS Makefiles" -DCMAKE_BUILD_TYPE=Release -DUSE_PYTHON2=ON -DPYTHON_LIBRARY=/mingw64/lib/libpython2.7.dll.a -DPYTHON_INCLUDE_DIR=/mingw64/include/python2.7 -Dgtest_disable_pthreads=ON -DUSE_SYSTEM_LIBCLANG=ON -DUSE_SYSTEM_BOOST=ON ..
 #/mingw64/bin/mingw32-make.exe -j1 # replace with make -j <num-of-cores> for speed.
+
+
+exit 0

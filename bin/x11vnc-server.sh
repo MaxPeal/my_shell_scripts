@@ -17,7 +17,7 @@ start () {
         -display :0 \
         -forever \
         -usepw \
-        -rmflag create:/home/jmanoel7/.vnc/x11vnc.pid \
+        -rmflag create:/home/joaomanoel/.vnc/x11vnc.pid \
         -httpdir /usr/share/x11vnc/classes/ssl \
         -httpport 57100 \
         -rfbport 56100
@@ -25,13 +25,15 @@ start () {
 
 if [ "X${1}X" = "XstartX" ]; then
     stop
-    sleep 0.5
+    sleep 1
     start
 elif [ "X${1}X" = "XstopX" ]; then
     stop
 else
     echo -e "usage:\t$(basename "$0")\tstart|stop"
-    exit 1
+    if [ -n "$1" ]; then
+        exit 1
+    fi
 fi
 
 exit 0
