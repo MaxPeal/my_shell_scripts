@@ -1,13 +1,14 @@
 #!/bin/sh
 
-if [ -z "$2" ]; then
-    echo -e "\n\a\tUsage: `basename $0` <user> <server> [geometry] [options]\n"
+if [ -z "$3" ]; then
+    echo -e "\n\a\tUsage: `basename $0` <user> <server> <domain> [geometry] [options]\n"
     exit 1
 fi
 
 user="$1"
 server="$2"
-shift 2
+domain="$3"
+shift 3
 
 if [ -n "$1" ]; then
     geometry="$1"
@@ -18,9 +19,10 @@ fi
 
 #exec xfreerdp \
 #    /window-drag /clipboard /aero /drive:home,$HOME \
-#    /size:$geometry /bpp:32 $@ /u:$user /v:$server
+#    /size:$geometry /bpp:32 $@
+#    /u:$user /v:$server /d:$domain
 
 exec rdesktop \
-    -g $geometry -D -a 32 -d ifg.br -p - -k pt-br -K \
+    -g $geometry -a 32 -p - -k pt-br \
     -r sound:local:alsa -r clipboard:PRIMARYCLIPBOARD -r disk:home=$HOME $@ \
-    -u $user $server
+    -u $user $server -d $domain
