@@ -11,7 +11,7 @@ fi
 # set JAVA_HOME
 if [ -z "$2" ]
 then
-    JAVA_HOME="/usr/local/java/default"
+    JAVA_HOME="/usr/lib/jvm/default-java"
 else
     JAVA_HOME="$2"
 fi
