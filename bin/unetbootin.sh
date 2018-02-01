@@ -1,2 +1,2 @@
-#!/bin/sh
-exec sudo ~/.local/bin/unetbootin-linux64-647.bin $@
+#!/bin/sh -e
+exec sudo ~/.local/bin/unetbootin-linux64-657.bin $@

@@ -17,4 +17,5 @@ else
     workdir="$HOME"
 fi
 
+#exec /usr/bin/urxvt -cd "$workdir" $@
 exec /usr/bin/terminator --working-directory="$workdir" $@

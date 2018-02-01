@@ -3,7 +3,7 @@
 # set MINECRAFT_JAR
 if [ -z "$1" ]
 then
-    MINECRAFT_JAR="$HOME/Dropbox/Minecraft/Mineshafter-launcher.jar"
+    MINECRAFT_JAR="$HOME/Dropbox/Minecraft/Minecraft.jar"
 else
     MINECRAFT_JAR="$1"
 fi
