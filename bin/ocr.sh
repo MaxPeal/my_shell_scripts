@@ -1,11 +1,15 @@
 #!/bin/bash
 
-if [ "$MSYSTEM_CARCH" == "x86_64" ]; then
+if [ "$MSYSTEM" == "MINGW64" ]; then
     export TESSDATA_PREFIX="/mingw64/share/tessdata/"
     export TESSERACT_BIN="/mingw64/bin/"
-elif [ "$MSYSTEM_CARCH" == "i686" ]; then
+elif [ "$MSYSTEM" == "MINGW32" ]; then
     export TESSDATA_PREFIX="/mingw32/share/tessdata/"
     export TESSERACT_BIN="/mingw32/bin/"
+else
+	echo -en "\a\n\t\t\"\$MSYSTEM\" = \"$MSYSTEM\"\n"
+	echo -en "\a\n\t\tSistema não suportado!!!\n"
+	exit 1
 fi
 
 echo -e "\n\tTESSERACT OCR IN FILES:\n"
