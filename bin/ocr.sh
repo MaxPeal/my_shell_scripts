@@ -1,7 +1,8 @@
 #!/bin/sh
 
-if [ "$MSYSTEM" == "MINGW64" ]; then
-    export TESSDATA_PREFIX="/mingw64/share"
+if [ "$MSYSTEM" == "MSYS" ]; then
+    export TESSDATA_PREFIX="/mingw64/share/tessdata/"
+    export TESSERACT_BIN="/mingw64/bin/"
 fi
 
 echo -e "\n\tTESSERACT OCR IN FILES:\n"
@@ -14,7 +15,7 @@ for input in $@; do
 
     echo -en "\t\t\"${input}\" to \"${output}.txt\" ... "
 
-    tesseract "${input}" "${output}" -l por >/dev/null 2>&1
+    "${TESSERACT_BIN}tesseract.exe" "${input}" "${output}" -l por >/dev/null 2>&1
 
     if [ $? == 0 ]; then
         echo -e "OK\n"
