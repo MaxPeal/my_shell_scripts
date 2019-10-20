@@ -6,10 +6,6 @@ if [ "$MSYSTEM" == "MINGW64" ]; then
 elif [ "$MSYSTEM" == "MINGW32" ]; then
     export TESSDATA_PREFIX="/mingw32/share/tessdata/"
     export TESSERACT_BIN="/mingw32/bin/"
-else
-	echo -en "\a\n\t\t\"\$MSYSTEM\" = \"$MSYSTEM\"\n"
-	echo -en "\a\n\t\tSistema não suportado!!!\n"
-	exit 1
 fi
 
 echo -e "\n\tTESSERACT OCR IN FILES:\n"
