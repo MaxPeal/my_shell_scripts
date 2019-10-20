@@ -1,8 +1,11 @@
 #!/bin/sh
 
-if [ "$MSYSTEM" == "MSYS" ]; then
+if [ "$MSYSTEM" == "MSYS" && "$MSYSTEM_CARCH" == "x86_64" ]; then
     export TESSDATA_PREFIX="/mingw64/share/tessdata/"
     export TESSERACT_BIN="/mingw64/bin/"
+elif [ "$MSYSTEM" == "MSYS" && "$MSYSTEM_CARCH" == "i686" ]; then
+    export TESSDATA_PREFIX="/mingw32/share/tessdata/"
+    export TESSERACT_BIN="/mingw32/bin/"
 fi
 
 echo -e "\n\tTESSERACT OCR IN FILES:\n"
